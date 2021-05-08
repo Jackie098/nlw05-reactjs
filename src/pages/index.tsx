@@ -1,12 +1,15 @@
-import { GetStaticProps } from "next";
-import Image from "next/image"; // Serve para redimensionar a imagem e não ficar pesada demais para o site
-import Link from "next/link";
-import { format, parseISO } from "date-fns";
-import ptBR from "date-fns/locale/pt-BR";
-import { api } from "../services/api";
-import { convertDurationToTimeString } from "../util/convertDurationToTimeString";
+import { useContext } from 'react';
+import { GetStaticProps } from 'next';
+import Image from 'next/image'; // Serve para redimensionar a imagem e não ficar pesada demais para o site
+import Link from 'next/link';
+import { format, parseISO } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 
-import styles from "./home.module.scss";
+import { api } from '../services/api';
+import { PlayerContext } from '../contexts/PlayerContext';
+import { convertDurationToTimeString } from '../util/convertDurationToTimeString';
+
+import styles from './home.module.scss';
 
 type Episode = {
   id: string;
@@ -26,6 +29,8 @@ type HomeProps = {
 };
 
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
+  const { play } = useContext(PlayerContext);
+
   return (
     <div className={styles.homepage}>
       <section className={styles.latestEpisodes}>
@@ -52,7 +57,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                   <span>{episode.durationAsString}</span>
                 </div>
 
-                <button type="button">
+                <button type="button" onClick={() => play(episode)}>
                   <img src="/play-green.svg" alt="Tocar episódio" />
                 </button>
               </li>
@@ -112,11 +117,11 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await api.get("episodes", {
+  const { data } = await api.get('episodes', {
     params: {
       _limit: 12,
-      _sort: "published_at",
-      _order: "desc",
+      _sort: 'published_at',
+      _order: 'desc',
     },
   });
 
@@ -127,7 +132,7 @@ export const getStaticProps: GetStaticProps = async () => {
       title: episode.title,
       thumbnail: episode.thumbnail,
       members: episode.members,
-      publishedAt: format(parseISO(episode.published_at), "d MMM yy", {
+      publishedAt: format(parseISO(episode.published_at), 'd MMM yy', {
         locale: ptBR,
       }),
       duration: Number(episode.file.duration),
