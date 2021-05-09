@@ -2,7 +2,7 @@
 utilizamos este arquivo para carregar somente uma vez arquivos que serão utilizados
 em todo o sistema, como: fontes */
 
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 // Possui o formato de classe porque o NEXT exige isso
 export default class MyDocument extends Document {
@@ -16,6 +16,8 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend:wght@500;600&display=swap"
             rel="stylesheet"
           />
+
+          <link rel="shortcut icon" href="/favicon.png" type="image/png" />
         </Head>
 
         <body>
