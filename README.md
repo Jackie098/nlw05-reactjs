@@ -1,34 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ ## Podcastr
+ 
+ Um player online de podcasts. Utilizando SSG (Static Site Generation) através de um servidor Next e renderização dinâmica com ReactJS foi construído um site para tocar podcasts. Sistema criado durante o evento da Rocketseat conhecido como NLW ou New Level Week.
 
-## Getting Started
 
-First, run the development server:
+## Tecnologias 
+ 
+Tecnologias utilizadas no projeto.
+ 
+* Node version 14.16.1
+* Typescript version 4.2.4
+* Next version 10.2.0
+* React version 17.0.2
+* SCSS version 1.32.11
+ 
+## Serviços Usados
+ 
+* Git
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Começando
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  **1º** Clone o projeto e instale as dependências (com YARN):
+  > yarn 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+  **2º** Após instalado todas as dependências, você vai precisar do *json-server* como dependência de desenvolvimento para rodar um servidor artificial.
+  > yarn add json-server -D
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+  Após instalá-lo, basta rodar o seguinte comando pois ele já está configurando no *package.json*. Este é o servidor da API que está localizado na raiz do projeto.
+  > yarn server
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  **3º** Com o servidor da API rodando, agora você precisa rodar o servidor react/next com:
+  > yarn dev
 
-## Learn More
+  **4º** No navegador, consulte o *localhost/3000* para acessar o site
 
-To learn more about Next.js, take a look at the following resources:
+## Como usar
+ 
+  **1º** Na página *home* sem mistério terá praticamente todas as funcionalidades:
+  ![Home](https://github.com/Jackie098/nlw05-reactjs/tree/main/images-readme/home.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  **2º** Ao clicar no título de um podcast, você será redirecionado para a página dele que contém detalhes do mesmo e você ainda pode reproduzi-lo:
+  ![Details-Episode](https://github.com/Jackie098/nlw05-reactjs/tree/main/images-readme/details_episode.png)
+ 
+## Atualizações
+ 
+  - Sugestões: 
+    - Deixar o site responsivo
+    - Criar uma PWA para rodar localmente
+    - Criar a versão desktop com Electron
+    - Adicionar o tema DARK
+ 
+ 
+## Links
+ 
+  - Repositório: https://github.com/Jackie098/nlw05-reactjs
+    - Em caso de dúvidas ou sugestões, sinta-se livre para entrar em contato e/ou solicitar **pull requests**.
+ 
+ 
+## Criadores
+ 
+* **Rocketseat**: (https://github.com/Rocketseat)
