@@ -35,10 +35,10 @@ Tecnologias utilizadas no projeto.
 
 ## Como usar
  
-  **1º** Na página *home* sem mistério terá praticamente todas as funcionalidades:
+  **1º** Na página *home* sem mistério terá praticamente todas as funcionalidades. Basta clicar no botão de play para rodar um podcast. Com os botões auxiliares, é possível passar e voltar de áudio, embaralhar e repetir um podcast específico:
   ![Home](https://github.com/Jackie098/nlw05-reactjs/blob/main/images-readme/home.png)
 
-  **2º** Ao clicar no título de um podcast, você será redirecionado para a página dele que contém detalhes do mesmo e você ainda pode reproduzi-lo:
+  **2º** Ao clicar no título de um podcast, você será redirecionado para a página dele que contém detalhes do mesmo além de poder reproduzi-lo:
   ![Details-Episode](https://github.com/Jackie098/nlw05-reactjs/blob/main/images-readme/details_episode.png)
  
 ## Atualizações
