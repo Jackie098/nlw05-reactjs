@@ -36,10 +36,10 @@ Tecnologias utilizadas no projeto.
 ## Como usar
  
   **1º** Na página *home* sem mistério terá praticamente todas as funcionalidades:
-  ![Home](https://github.com/Jackie098/nlw05-reactjs/tree/main/images-readme/home.png)
+  ![Home](https://github.com/Jackie098/nlw05-reactjs/blob/main/images-readme/home.png)
 
   **2º** Ao clicar no título de um podcast, você será redirecionado para a página dele que contém detalhes do mesmo e você ainda pode reproduzi-lo:
-  ![Details-Episode](https://github.com/Jackie098/nlw05-reactjs/tree/main/images-readme/details_episode.png)
+  ![Details-Episode](https://github.com/Jackie098/nlw05-reactjs/blob/main/images-readme/details_episode.png)
  
 ## Atualizações
  
